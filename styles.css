@@ -1,0 +1,85 @@
+/* Global Styles & Theming for Xylax AI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+
+  /* Light Theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb; /* gray-50 */
+  --bg-tertiary: #f3f4f6;  /* gray-100 */
+  --text-primary: #111827; /* gray-900 */
+  --text-secondary: #6b7280; /* gray-500 */
+  --border-color: #e5e7eb; /* gray-200 */
+  --brand-pink: #ec4899;
+  --brand-pink-hover: #db2777;
+
+  /* Scrollbar */
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #d1d5db; /* gray-300 */
+  --scrollbar-thumb-hover: #9ca3af; /* gray-400 */
+}
+
+html.dark {
+  /* Dark Theme */
+  --bg-primary: #000000;
+  --bg-secondary: #111111;
+  --bg-tertiary: #1f2937;  /* gray-800 */
+  --text-primary: #f9fafb; /* gray-100 */
+  --text-secondary: #9ca3af; /* gray-400 */
+  --border-color: #374151;      /* gray-700 */
+
+  /* Scrollbar */
+  --scrollbar-thumb: #4b5563; /* gray-600 */
+  --scrollbar-thumb-hover: #6b7280; /* gray-500 */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+
+/* Message Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-bubble-animation {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Custom class for input textarea to hide scrollbar but keep functionality */
+.custom-textarea {
+   scrollbar-width: none; /* Firefox */
+}
+.custom-textarea::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}

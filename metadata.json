@@ -1,0 +1,7 @@
+{
+  "name": "Xylax AI Chat",
+  "description": "An agentic AI expert chat that helps you plan and take action on any task. Features multi-modal input (text, image, video, audio), content generation, code generation, file summarization, and various specialized AI models for deep reasoning, fast responses, and grounded search.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
